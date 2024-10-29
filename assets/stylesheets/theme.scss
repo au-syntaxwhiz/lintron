@@ -1,0 +1,197 @@
+@import 'settings';
+@import 'breakpoint';
+//header themes
+.header{
+  .powered-by-revelry{
+      position: absolute;
+      left: 180px;
+      top: 18px;
+      img{
+        width: 55px;
+      }
+  }
+}
+.github-signin{
+  text-transform: uppercase;
+  color: $white;
+  float: right;
+  top: 20px;
+  right: 80px;
+  position: relative;
+}
+.github-icon{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  top: 10px;
+  right: 60px;
+  img{
+    width: 1440px;
+    height: auto;
+    position: relative;
+    margin: -27px -10px 0px -270px;
+  }
+}
+.logo-container{
+  width: 120px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  margin-left: 60px;
+  .logo-container-img{
+    width: 720px;
+    height: auto;
+  }
+}
+//splash themes
+.hero-splash {
+  width: 100%;
+  height: 100%;
+  background: url('/images/lintron-hero-bg.png') $body-bkgd;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: $global-vertical-space * 2;
+}
+
+.led-logo {
+  position: relative;
+  top: -28px;
+  left: -6px;
+}
+
+.logo {
+  max-width: 240px;
+  position: relative;
+  top: 9px;
+}
+
+//hooks themes
+.super-logo{
+  width: 720px;
+  height:250px;
+  margin-bottom: 50px;
+  left: 50%;
+  margin-left: -360px;
+  position: relative;
+  overflow: hidden;
+  top: 120px;
+  margin-bottom: 130px;
+  img{
+    width:4000px;
+    max-width: inherit;
+    height: auto;
+  }
+  .powered-by-revelry{
+      position: absolute;
+      left: 300px;
+      top: 215px;
+      img{
+        width: inherit;;
+      }
+  }
+}
+//style encapsulation workaround
+
+.lintron-styles {
+  img{
+    max-width: inherit;
+  }
+  //global themes
+  p{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color:$white;
+  }
+  a{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    font-size: 14px;
+    color:$white;
+    text-decoration: none;
+  }
+  h1{
+    color:$white;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+  }
+  h2 {
+    color:$white;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+  }
+  h3{
+    color:$white;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin: 0px;
+  }
+  h4{
+
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 100;
+    margin:5px;
+  }
+  .white-text{
+    color:$white;
+  }
+  .color-accent-text{
+    color:$secondary-color;
+  }
+  .color-text{
+    color:$primary-color;
+  }
+  .background{
+    background: $body-bkgd;
+  }
+  section {
+    @include breakpoint($medium) {
+      padding: $global-vertical-space * 4 $global-horizontal-space * 4;
+    }
+  }
+  .dark {
+    background: $black;
+    background-repeat: repeat;
+    color: #fff;
+    a,
+    a:link,
+    a:visited,
+    a:hover {
+      color: $yellow;
+    }
+  }
+  .dark.map {
+    background-color: $black;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid $black;
+    clear: both;
+  }
+  .yellow {
+    background: $yellow;
+  }
+  section.footer {
+    padding: $global-vertical-space 0;
+    ul {
+      display: inline-block;
+      list-style-position: outside;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      li {
+        display: block;
+        float: left;
+        font-size: inherit;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
